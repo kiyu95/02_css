@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIYU's Portfolio</title>
+    
+    <link rel="stylesheet" href="instroduction_style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    
+
+    <style>
+        *,:after,:before {
+        box-sizing: border-box
+    }
+    
+        .Header_header{
+            box-sizing: border-box;
+            background-color: black;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 10; /* 왜 쓰였을까? */
+        }
+
+        .Header_contents{
+            box-sizing: border-box;
+            width: 100%;
+            max-width: 71.25em;
+            height: 4.5em;
+            padding: 1.25em 2em;
+            margin: auto;
+        }
+
+        .Header_title{
+            color: white;
+            display: inline-block;
+            font-weight: 700;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            /* cursor: pointer; */
+        }
+
+        .Header_navigation-menus{
+            float: right;
+            color: white;
+        }
+        
+        .Header_navigation-menu_AboutMe{
+            display: inline-block;
+            padding: 0 1rem;
+            font-weight: 700;
+            font-size: 1rem;
+            line-height: 2rem;
+        }
+
+        .Header_navigation-menu_Skills{
+            display: inline-block;
+            padding: 0 1rem;
+            font-weight: 700;
+            font-size: 1rem;
+            line-height: 2rem;
+        }
+
+        .Header_navigation-menu_Project{
+            display: inline-block;
+            padding: 0 1rem;
+            font-weight: 700;
+            font-size: 1rem;
+            line-height: 2rem;
+        }
+
+        .Header_navigation-menu_Contact{
+            display: inline-block;
+            padding: 0 1rem;
+            font-weight: 700;
+            font-size: 1rem;
+            line-height: 2rem;
+        }
+        
+        .Main_content{
+            box-sizing: border-box;
+            width: 100%;
+            max-width: 71.25rem;
+            margin: 0 auto;
+            padding: 8.5rem 2rem 4rem;
+            text-align: center;
+
+            background-color: black;
+        }
+
+        .Main_title{
+            font-family: 'Black Han Sans', sans-serif;
+            font-weight: 400;
+            font-size: 4rem;
+            color: white;
+        }
+
+        .Main_divider{
+            width: 3.25rem;
+            height: 0;
+            margin: 1.5rem auto;
+            border: none;
+            border-top: 0.2em solid #f4623a;
+            /* border-color: #f4623a; */
+        }
+
+        .Main_description{
+            margin: 0 auto 2em;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+            font-size: 1.25em;
+            color: white;
+            line-height: 1.5;
+        }
+
+        .AboutMe{
+            background-color: black;
+        }
+
+        .AboutMe_content{
+            -webkit-box-sizing : border-box;
+            width: 100%;
+            max-width: 71.25rem;
+            padding: 4rem 2rem;
+            margin: 0 auto;
+        }
+
+        .AboutMe_title{
+            display: table;
+            position: relative;
+            margin: 0 auto 3rem;
+        }
+        
+        .AboutMe_title_text{
+            color: white;
+            font-family: 'Black Han Sans', sans-serif;
+            font-weight: 400;
+            font-size: 3rem;
+            line-height: 1.5;
+        }
+
+        .AboutMe_info{
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            flex-flow: row wrap; 
+            justify-content: space-between; 
+            -webkit-box-pack: justify; 
+            color: white;
+        }
+
+        .AboutMe_info_name{
+            margin-bottom: 2rem;
+            width: 33.3333%;
+            
+        }
+
+        .AboutMe_info_nameBox{
+            display: flex;
+            flex-flow: row nowrap;
+            width: 100%;
+            max-width: 14rem;
+            margin: 0 auto;
+            /* opacity: .8; */
+        }
+
+        .AboutMe_info_name_img{
+            width: 2rem;
+            min-width: 2rem;
+            height: 2rem;
+            margin-top: 0.2rem;
+            margin-right: 2rem;
+        }
+
+        .AboutMe_info_name_title{
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .AboutMe_info_name_text{
+            font-weight: 400;
+            font-size: 1rem;
+        }
+
+        .AboutMe_info_birth{
+            margin-bottom: 2rem;
+            width: 33.3333%;
+        }
+
+        .AboutMe_info_birthBox{
+            display: flex;
+            flex-flow: row nowrap;
+            width: 100%;
+            max-width: 14rem;
+            margin: 0 auto;
+            /* opacity: .8; */
+        }
+
+        .AboutMe_info_birth_img{
+            width: 2rem;
+            min-width: 2rem;
+            height: 2rem;
+            margin-top: 0.2rem;
+            margin-right: 2rem;
+        }
+
+        .AboutMe_info_birth_title{
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .AboutMe_info_birth_text{
+            font-weight: 400;
+            font-size: 1rem;
+        }
+
+        .AboutMe_info_adress{
+            margin-bottom: 2rem;
+            width: 33.3333%;
+        }
+
+        .AboutMe_info_adressBox{
+            display: flex;
+            flex-flow: row nowrap;
+            width: 100%;
+            max-width: 14rem;
+            margin: 0 auto;
+            /* opacity: .8; */
+        }
+
+        .AboutMe_info_adress_img{
+            width: 2rem;
+            min-width: 2rem;
+            height: 2rem;
+            margin-top: 0.2rem;
+            margin-right: 2rem;
+        }
+
+        .AboutMe_info_adress_title{
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .AboutMe_info_adress_text{
+            font-weight: 400;
+            font-size: 1rem;
+        }
+
+        .AboutMe_info_phoneNumber{
+            margin-bottom: 2rem;
+            width: 33.3333%;
+        }
+
+        .AboutMe_info_phoneNumberBox{
+            display: flex;
+            flex-flow: row nowrap;
+            width: 100%;
+            max-width: 14rem;
+            margin: 0 auto;
+            /* opacity: .8; */
+        }
+
+        .AboutMe_info_phoneNumber_img{
+            width: 2rem;
+            min-width: 2rem;
+            height: 2rem;
+            margin-top: 0.2rem;
+            margin-right: 2rem;
+        }
+
+        .AboutMe_info_phoneNumber_title{
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .AboutMe_info_phoneNumber_text{
+            font-weight: 400;
+            font-size: 1rem;
+        }
+
+        .AboutMe_info_email{
+            margin-bottom: 2rem;
+            width: 33.3333%;
+        }
+
+        .AboutMe_info_emailBox{
+            display: flex;
+            flex-flow: row nowrap;
+            width: 100%;
+            max-width: 14rem;
+            margin: 0 auto;
+            /* opacity: .8; */
+        }
+
+        .AboutMe_info_email_img{
+            width: 2rem;
+            min-width: 2rem;
+            height: 2rem;
+            margin-top: 0.2rem;
+            margin-right: 2rem;
+        }
+
+        .AboutMe_info_email_title{
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .AboutMe_info_email_text{
+            font-weight: 400;
+            font-size: 1rem;
+        }
+
+        .AboutMe_info_graduation{
+            margin-bottom: 2rem;
+            width: 33.3333%;
+        }
+
+        .AboutMe_info_graduationBox{
+            display: flex;
+            flex-flow: row nowrap;
+            width: 100%;
+            max-width: 14rem;
+            margin: 0 auto;
+            /* opacity: .8; */
+        }
+
+        .AboutMe_info_graduation_img{
+            width: 2rem;
+            min-width: 2rem;
+            height: 2rem;
+            margin-top: 0.2rem;
+            margin-right: 2rem;
+        }
+
+        .AboutMe_info_graduation_title{
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .AboutMe_info_graduation_text{
+            font-weight: 400;
+            font-size: 1rem;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="Header_header">
+        <div class="Header_contents">
+            <div class="Header_title">KIYU's Portfolio</div>
+            
+            <div class="Header_navigation-menus">
+                <div class="Header_navigation-menu_AboutMe">About me</div>
+                <div class="Header_navigation-menu_Skills">Skills</div>
+                <div class="Header_navigation-menu_Project">Project</div>
+                <div class="Header_navigation-menu_Contact">Contact</div>
+            </div>
+        </div>
+    </header>
+    <div class="Main">
+        <div class="Main_content">
+            <div class="Main_title">
+                김기유
+                <br>
+                웹 개발자 포토폴리오
+            </div>
+            <hr class="Main_divider">
+            <div class="Main_description">
+                안녕하세요.
+                <br>
+                신입 풀스택 웹 개발자입니다.
+            </div>
+        </div>
+    </div>
+    <article class="AboutMe">
+        <div class="AboutMe_content">
+            <div class="AboutMe_title">
+                <div class="AboutMe_title_text">
+                    ABOUT ME
+                </div>
+            </div>
+            <div class="AboutMe_info">
+                <div class="AboutMe_info_name">
+                    <div class="AboutMe_info_nameBox">
+                        <div class="AboutMe_info_name_img">
+                            <i class="fa-solid fa-user-large" style="width: 100%;"></i>
+                        </div>
+                        <div class="About_info_name_tittleText">
+                            <div class="AboutMe_info_name_title">
+                                이름
+                            </div>
+                            <div class="AboutMe_info_name_text">
+                                김기유
+                            </div>
+                        </div>
+                </div>
+            </div>
+                <div class="AboutMe_info_birth">
+                    <div class="AboutMe_info_birthBox">
+                        <div class="AboutMe_info_birth_img">
+                            <i class="fa-solid fa-calendar"></i>
+                        </div>
+                        <div class="AboutMe_info_birth_titleText">
+                            <div class="AboutMe_info_birth_title">
+                                생년월일
+                            </div>
+                            <div class="AboutMe_info_birth_text">
+                                95.04.28
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="AboutMe_info_adress">
+                    <div class="AboutMe_info_adressBox">
+                        <div class="AboutMe_info_adress_img">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="AboutMe_info_adress_titleText">
+                            <div class="AboutMe_info_adress_title">
+                                주소
+                            </div>
+                            <div class="AboutMe_info_adress_text">
+                                서울특별시 관악구
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="AboutMe_info_phoneNumber">
+                    <div class="AboutMe_info_phoneNumberBox">
+                        <div class="AboutMe_info_phoneNumber_img">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="AboutMe_info_phoneNumber_titleText">
+                            <div class="AboutMe_info_phoneNumber_title">
+                                연락처
+                            </div>
+                            <div class="AboutMe_info_phoneNumber_text">
+                                010-8864-2385
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="AboutMe_info_email">
+                    <div class="AboutMe_info_emailBox">
+                        <div class="AboutMe_info_email_img">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="AboutMe_info_email_titleText">
+                            <div class="AboutMe_info_email_title">
+                                이메일
+                            </div>
+                            <div class="AboutMe_info_email_text">
+                                giu0428@gmail.com
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="AboutMe_info_graduation">
+                        <div class="AboutMe_info_graduationBox">
+                        <div class="AboutMe_info_graduation_img">
+                            <i class="fa-solid fa-user-graduate"></i>
+                        </div>
+                        <div class="AboutMe_info_graduation_titleText">
+                            <div class="AboutMe_info_graduation_title">
+                                학력
+                            </div>
+                            <div class="AboutMe_info_graduation_text">
+                                한성대학교
+                                <br>
+                                (정보통신공학)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    
+</body>
+</html>
